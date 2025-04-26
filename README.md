@@ -70,6 +70,12 @@ http://your-server-ip/
 
 You will see live weather information for the selected city.
 
+## ✅ Example Ansible Output
+
+Below is an example output of a successful deployment:
+
+![Ansible Deployment Output](ansible-output.png)
+
 ## 📚 Technologies Used
 
 - Ansible
