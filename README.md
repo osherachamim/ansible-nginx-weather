@@ -51,11 +51,8 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
    [webservers]
     your-server-ip ansible_user=your-ssh-user
    ```
-4. **(Optional) Customize Default City**
 
-Edit `roles/nginx_weather/defaults/main.yml`:
-
-5. **Deploy the Weather App**
+4. **Deploy the Weather App**
    ```
    ansible-playbook deploy_weather.yml --ask-become-pass
     ```
