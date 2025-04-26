@@ -35,10 +35,67 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/ansible-nginx-weather.git
+   git clone https://github.com/osherachamim/ansible-nginx-weather.git
    cd ansible-nginx-weather/
    ```
-   **Encrypt Your API Key**
+2.  **Encrypt Your API Key**
    ```
    ansible-vault create roles/nginx_weather/vars/secrets.yml
+   ```
+   **Inside, add:**
+   ```
+   weather_api_key: "your_real_openweathermap_api_key"
+   ```
+3. **Update Your Inventory**
+   ```
+   [webservers]
+    your-server-ip ansible_user=your-ssh-user
+   ```
+4. **(Optional) Customize Default City**
+
+Edit `roles/nginx_weather/defaults/main.yml`:
+
+5. **Deploy the Weather App**
+   ```
+   ansible-playbook deploy_weather.yml --ask-become-pass
+    ```
+## 🔒 Security
+
+- API keys are encrypted using Ansible Vault.
+- No sensitive information is exposed in the project or GitHub.
+
+## 🌍 Access the Weather Web App
+
+After successful deployment, open:
 ```
+http://your-server-ip/
+```
+
+You will see live weather information for the selected city.
+
+## 📚 Technologies Used
+
+- Ansible
+- NGINX
+- OpenWeatherMap API
+- Ansible Vault
+- CentOS (target servers)
+
+## 🎯 Skills Demonstrated
+
+- Infrastructure automation with Ansible
+- Secure secret management with Vault
+- NGINX server setup and configuration
+- Modular Ansible role design
+- Real-world DevOps practices
+
+## 🚀 Future Improvements
+
+- Add HTTPS (SSL certificates)
+- Deploy different cities per host
+- Enhance the web page with CSS styling
+- Display weather icons, humidity, and wind data
+
+## 🤝 License
+
+This project is licensed under the MIT License.
