@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather in {{ weather_city }}</title>
+</head>
+<body>
+    <h1>Weather in {{ weather_city }}</h1>
+    <div id="weather"></div>
+
+    <script>
+        fetch('https://api.openweathermap.org/data/2.5/weather?q={{ weather_city }}&appid={{ weather_api_key }}&units=metric')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('weather').innerHTML =
+                "Temperature: " + data.main.temp + "°C, " +
+                "Condition: " + data.weather[0].description;
+        });
+    </script>
+</body>
+</html>
