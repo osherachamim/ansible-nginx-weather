@@ -31,6 +31,20 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
         ├── vars/
         └── meta/
 ```
+## 🛠️ Role Creation (Built from Scratch)
+
+This project was built from scratch using the Ansible Galaxy role generator:
+
+```bash
+ansible-galaxy init roles/nginx_weather
+```
+The `nginx_weather` role was then fully customized to:
+
+- ✅ Install and configure **NGINX** on **CentOS** machines
+- 🔐 Securely load a **Vault-encrypted API key**
+- 🌐 Deploy a **weather page** using a **Jinja2 HTML template**
+- 🔁 Include **handlers** for service restart logic
+
 ## ⚙️ How to Set Up and Run
 
 1. **Clone the Repository**
