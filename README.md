@@ -31,3 +31,14 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
         ├── vars/
         └── meta/
 ```
+## ⚙️ How to Set Up and Run
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/ansible-nginx-weather.git
+   cd ansible-nginx-weather/
+   ```
+   **Encrypt Your API Key**
+   ```
+   ansible-vault create roles/nginx_weather/vars/secrets.yml
+```
