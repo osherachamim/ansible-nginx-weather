@@ -16,7 +16,7 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
 
 ## 📁 Project Structure
 
-ansible-nginx-weather/
+``` ansible-nginx-weather/
 ├── ansible.cfg
 ├── deploy_weather.yml
 ├── inventory.txt
@@ -30,3 +30,4 @@ ansible-nginx-weather/
         ├── templates/
         ├── vars/
         └── meta/
+```
