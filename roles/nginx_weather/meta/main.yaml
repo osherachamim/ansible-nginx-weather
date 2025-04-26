@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  role_name: nginx_weather
+  author: Osher Rachamim
+  description: Ansible role to deploy an NGINX web server hosting a real-time weather app using OpenWeatherMap API.
+  company: ""
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: EL
+      versions:
+        - 8
+        - 9
+
+dependencies: []
