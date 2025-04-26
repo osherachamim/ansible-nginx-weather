@@ -48,7 +48,7 @@ It uses Ansible roles, templates, handlers, and secure variable management with 
    ```
 3. **Update Your Inventory**
    ```
-   [webservers]
+   [labs]
     your-server-ip ansible_user=your-ssh-user
    ```
 
