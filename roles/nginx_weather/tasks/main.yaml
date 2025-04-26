@@ -1,0 +1,21 @@
+---
+- name: Load Vaulted Secrets
+  include_vars: secrets.yml
+
+- name: Install NGINX (CentOS)
+  yum:
+    name: nginx
+    state: present
+
+- name: Deploy Weather Homepage
+  template:
+    src: index.html.j2
+    dest: /usr/share/nginx/html/index.html
+    mode: '0644'
+  notify: restart nginx
+
+- name: Ensure nginx is running and enabled
+  service:
+    name: nginx
+    state: started
+    enabled: yes
