@@ -92,13 +92,6 @@ Below is an example output of a successful deployment:
 - Modular Ansible role design
 - Real-world DevOps practices
 
-## 🚀 Future Improvements
-
-- Add HTTPS (SSL certificates)
-- Deploy different cities per host
-- Enhance the web page with CSS styling
-- Display weather icons, humidity, and wind data
-
 ## 🤝 License
 
 This project is licensed under the MIT License.
